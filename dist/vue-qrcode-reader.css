@@ -3,19 +3,29 @@
   position: relative;
   display: block;
 }
-.qrcode-reader .qrcode-reader__camera {
-    display: block;
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
+.qrcode-reader__camera {
+  display: block;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
 }
-.qrcode-reader .qrcode-reader__snapshot {
-    display: none;
+.qrcode-reader__snapshot {
+  display: none;
 }
-.qrcode-reader .qrcode-reader__overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+.qrcode-reader__overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
 }
+#camera-switch {
+  position: fixed;
+  z-index: 9999!important;
+  background: transparent!important;
+  color: #fff;
+  font-size: 2em;
+  padding: 10px 20px;
+  top: 50px;
+  right: 20px;
+}
+
