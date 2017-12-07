@@ -1,11 +1,8 @@
 {
-  "name": "vue-qrcode-reader",
+  "name": "vue-qrcode-reader-itcioci",
   "description": "A Vue.js component, accessing the device camera and allowing users to read QR-Codes, within the browser",
-  "version": "0.6.3",
-  "author": {
-    "name": "Niklas Gruhn",
-    "email": "niklas.gruhn@gmail.com"
-  },
+  "version": "0.0.3",
+  "author": "HoangKimDuc <kimduc10a@gmail.com>",
   "keywords": [
     "vue",
     "vuejs",
@@ -29,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gruhn/vue-qrcode-reader.git"
+    "url": "git+https://github.com/HoangKimDuc/vue-qrcode-reader.git"
   },
   "bugs": {
-    "url": "https://github.com/gruhn/vue-qrcode-reader/issues"
+    "url": "https://github.com/HoangKimDuc/vue-qrcode-reader/issues"
   },
-  "homepage": "https://github.com/gruhn/vue-qrcode-reader#readme",
+  "homepage": "https://github.com/HoangKimDuc/vue-qrcode-reader#readme",
   "devDependencies": {
     "babel-core": "^6.0.0",
     "babel-eslint": "^7.1.1",
@@ -81,5 +78,8 @@
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "jsqr": "^0.2.2"
+  },
+  "directories": {
+    "test": "test"
   }
 }
