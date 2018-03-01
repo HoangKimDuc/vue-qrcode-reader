@@ -167,26 +167,7 @@
           })
         }
         let id = null
-        //  Trường hợp 1:  1 camera
-        if (this.cameras.length < 2) {
-          id = this.cameras[0].deviceId
-        } else if (this.cameras.length >= 2) {
-          //  lấy facing mặc định lần đầu
-          if (this.isfirtChange) {
-            //  kiểm tra xem device nào là front/back
-            id = this.cameras[this.facing].deviceId
-            this.isfirtChange = false
-          } else {
-            //  kiểm tra và là camera front hay back
-            //  NẾU mặc định front trước thì facingMode = true sẽ là camera sau
-            //  NẾU mặc định back trước thì facingMode = false sẽ là camera trước
-            if (this.facingMode) {
-              id = this.cameras[0].deviceId
-            } else {
-              id = this.cameras[1].deviceId
-            }
-          }
-        }
+        id = this.cameras[this.facing].deviceId
         var constraints = {
           audio: false,
           video: {
@@ -260,38 +241,37 @@
 </script>
 
 <style>
-  .qrcode-reader {
-    position: relative;
-    display: block;
-  }
+.qrcode-reader {
+  position: relative;
+  display: block;
+}
 
-  .qrcode-reader__camera {
-    display: block;
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
-  }
+.qrcode-reader__camera {
+  display: block;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
 
-  .qrcode-reader__snapshot {
-    display: none;
-  }
+.qrcode-reader__snapshot {
+  display: none;
+}
 
-  .qrcode-reader__overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-  }
+.qrcode-reader__overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
 
-  #camera-switch {
-    position: fixed;
-    z-index: 9999!important;
-    background: transparent!important;
-    color: #fff;
-    font-size: 2em;
-    padding: 10px 20px;
-    top: 50px;
-    right: 20px;
-  }
-
+#camera-switch {
+  position: fixed;
+  z-index: 9999 !important;
+  background: transparent !important;
+  color: #fff;
+  font-size: 2em;
+  padding: 10px 20px;
+  top: 50px;
+  right: 20px;
+}
 </style>

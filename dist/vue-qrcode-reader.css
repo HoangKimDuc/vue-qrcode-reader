@@ -20,12 +20,11 @@
 }
 #camera-switch {
   position: fixed;
-  z-index: 9999!important;
-  background: transparent!important;
+  z-index: 9999 !important;
+  background: transparent !important;
   color: #fff;
   font-size: 2em;
   padding: 10px 20px;
   top: 50px;
   right: 20px;
 }
-
