@@ -26,8 +26,8 @@
         default: false,
       },
       facing: {
-        type: String,
-        default: 'front',
+        type: Number,
+        default: 0,
       },
 
     },
@@ -174,12 +174,7 @@
           //  lấy facing mặc định lần đầu
           if (this.isfirtChange) {
             //  kiểm tra xem device nào là front/back
-            for (let item of this.cameras) {
-              if (item.label.indexOf(this.facing) >= 0) {
-                id = item.deviceId
-                break
-              }
-            }
+            id = this.cameras[this.facing].deviceId
             this.isfirtChange = false
           } else {
             //  kiểm tra và là camera front hay back
