@@ -17,7 +17,7 @@
     scan,
   } from '../scanner.js'
 
-  const SCAN_INTERVAL = 40 // 1000ms / 40ms = 25fps
+  const SCAN_INTERVAL = 5 // 1000ms / 5ms = 200fps
 
   export default {
     props: {
@@ -96,9 +96,6 @@
       points (newValue) {
         this.$emit('locate', newValue)
       },
-      facingMode () {
-        this.getStream()
-      },
     },
 
     mounted () {
@@ -171,6 +168,7 @@
         var constraints = {
           audio: false,
           video: {
+            facingMode: 'user',
             deviceId: {
               exact: id,
             },
